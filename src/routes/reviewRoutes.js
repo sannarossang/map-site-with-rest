@@ -13,7 +13,7 @@ const {
 //GET /api/v1/reviews - Get all reviews
 router.get("/", getAllReviews);
 
-//GET /api/v1/reviews/:reviewId - Get a review by id
+//GET /api/v1/restaurants/:restaurantId/reviews/:reviewId - Get a review by id
 router.get("/:reviewId", getReviewById);
 
 //POST /api/v1/reviews - Create new review
@@ -26,3 +26,6 @@ router.put("/:reviewId", updateReviewById);
 router.delete("/:reviewId", deleteReviewById);
 
 module.exports = router;
+
+// /restaurants/:callesPizzeria/reviews/:reviewId
+// restaurants/:restaurantId/reviews

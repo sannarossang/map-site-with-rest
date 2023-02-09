@@ -29,7 +29,7 @@ const restaurantRoutes = require("./routes/restaurantRoutes");
 
 const app = express();
 
-app.use("/api/v1/reviews", reviewRoutes);
+app.use("/api/v1/restaurants/:restaurantId/reviews", reviewRoutes);
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/restaurants", restaurantRoutes);
 

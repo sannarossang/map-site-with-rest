@@ -14,11 +14,18 @@ const UserSchema = new mongoose.Schema({
     type: String,
   },
 
-  wishList: {
-    type: [mongoose.Schema.Types.ObjectId],
-    // ref: "Wishlist",
-    ref: "Restaurant",
+  password: {
+    type: String,
+    required: true,
+    unique: true,
+    minLength: 8,
   },
+
+  // wishList: {
+  //   type: [mongoose.Schema.Types.ObjectId],
+  //   ref: "Wishlist",
+  //   ref: "Restaurant",
+  // },
 
   profilePicture: {
     type: String,
